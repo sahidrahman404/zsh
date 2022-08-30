@@ -81,13 +81,6 @@ compinit
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# TODO Remove these
-# setxkbmap -option caps:escape
-# xset r rate 210 40
-
-# Speedy keys
-# xset r rate 210 40
-
 # Environment variables set everywhere
 export EDITOR="nvim"
 export TERMINAL="alacritty"
@@ -95,11 +88,6 @@ export BROWSER="brave"
 
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-# remap caps to escape
-# setxkbmap -option caps:escape
-# swap escape and caps
-# setxkbmap -option caps:swapescape
 
 #ssh
 eval $(keychain --eval --quiet id_rsa_gitlab ~/.ssh/id_rsa_gitlab)
@@ -117,13 +105,6 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 # fnm
 export PATH=/home/rahman/.fnm:$PATH
-eval "`fnm env`"
-
-# fnm
-export PATH=/home/rahman/.fnm:$PATH
-eval "`fnm env`"
+eval "$(fnm env)"

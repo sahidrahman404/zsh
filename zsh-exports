@@ -30,3 +30,10 @@ export FLYCTL_INSTALL="/home/rahman/.fly"
   export DENO_INSTALL="/home/rahman/.deno"
   export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# cargo
+. "/home/rahman/.local/share/cargo/env"
+
+# npm
+PATH="$HOME/.local/bin:$PATH"
+export npm_config_prefix="$HOME/.local"
