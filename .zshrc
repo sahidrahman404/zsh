@@ -82,7 +82,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Environment variables set everywhere
-export EDITOR="nvim"
+export EDITOR="emacsclient -c -a emacs"
 export TERMINAL="alacritty"
 export BROWSER="brave"
 
@@ -108,3 +108,8 @@ bindkey -s '^o' 'lfcd\n'
 # fnm
 export PATH=/home/rahman/.fnm:$PATH
 eval "$(fnm env)"
+
+# pnpm
+export PNPM_HOME="/home/rahman/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
