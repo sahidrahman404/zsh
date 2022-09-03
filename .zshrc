@@ -105,11 +105,9 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-# fnm
-export PATH=/home/rahman/.fnm:$PATH
-eval "$(fnm env)"
-
-# pnpm
-export PNPM_HOME="/home/rahman/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+# run emacs daemon
+if ! ps -e -o args | grep -i 'emacs' | grep 'daemon'; then
+ emacs --daemon
+else
+  echo "Emacs server Online"
+fi
