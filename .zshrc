@@ -1,7 +1,7 @@
 #!/bin/sh
-export ZDOTDIR=$HOME/.config/zsh
-HISTFILE=~/.zsh_history
-setopt appendhistory
+# export ZDOTDIR=$HOME/.config/zsh
+# HISTFILE=~/.zsh_history
+# setopt appendhistory
 
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
@@ -38,9 +38,9 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
-zsh_add_file "zsh-exports"
+# zsh_add_file "zsh-exports"
 zsh_add_file "zsh-vim-mode"
-zsh_add_file "zsh-aliases"
+# zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
@@ -106,3 +106,6 @@ if ! ps -e -o args | grep -i 'emacs' | grep 'daemon'; then
 else
   echo "Emacs server Online"
 fi
+
+# add zeoxide
+eval "$(zoxide init zsh)"
