@@ -1,7 +1,8 @@
 #!/bin/sh
-# export ZDOTDIR=$HOME/.config/zsh
-# HISTFILE=~/.zsh_history
-# setopt appendhistory
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+setopt appendhistory
 
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
@@ -109,3 +110,9 @@ fi
 
 # add zeoxide
 eval "$(zoxide init zsh)"
+
+# mcfly
+eval "$(mcfly init zsh)"
+
+# fnm
+eval "$(fnm env)"
