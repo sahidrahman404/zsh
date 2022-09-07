@@ -81,13 +81,8 @@ compinit
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Environment variables set everywhere
-export EDITOR="emacsclient -c -a emacs"
-export TERMINAL="alacritty"
-export BROWSER="brave"
-
 # For QT Themes
-export QT_QPA_PLATFORMTHEME=qt5ct
+# export QT_QPA_PLATFORMTHEME=qt5ct
 
 #ssh
 eval $(keychain --eval --quiet id_rsa_gitlab ~/.ssh/id_rsa_gitlab)
