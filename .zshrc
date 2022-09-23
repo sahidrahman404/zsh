@@ -113,6 +113,3 @@ eval "$(zoxide init zsh)"
 
 # mcfly
 eval "$(mcfly init zsh)"
-
-# fnm
-eval "$(fnm env)"
