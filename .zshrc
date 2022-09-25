@@ -113,3 +113,4 @@ eval "$(zoxide init zsh)"
 
 # mcfly
 eval "$(mcfly init zsh)"
+export MCFLY_FUZZY=5
