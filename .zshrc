@@ -39,9 +39,7 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
-# zsh_add_file "zsh-exports"
 zsh_add_file "zsh-vim-mode"
-# zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
@@ -67,23 +65,9 @@ bindkey "^k" up-line-or-beginning-search # Up
 bindkey -r "^u"
 bindkey -r "^d"
 
-# FZF 
-# TODO update for mac
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
-[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
-# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-compinit
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-
-# For QT Themes
-# export QT_QPA_PLATFORMTHEME=qt5ct
 
 #ssh
 eval $(keychain --eval --quiet id_rsa_gitlab ~/.ssh/id_rsa_gitlab)
