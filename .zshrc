@@ -99,3 +99,5 @@ eval "$(zoxide init zsh)"
 eval "$(mcfly init zsh)"
 export MCFLY_FUZZY=5
 export MCFLY_KEY_SCHEME=vim
+
+. /opt/asdf-vm/asdf.sh
