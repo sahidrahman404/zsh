@@ -86,11 +86,11 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 
 # run emacs daemon
-if ! ps -e -o args | grep -i 'emacs' | grep 'daemon'; then
- emacs --daemon
-else
-  echo "Emacs server Online"
-fi
+# if ! ps -e -o args | grep -i 'emacs' | grep 'daemon'; then
+#  emacs --daemon
+# else
+#   echo "Emacs server Online"
+# fi
 
 # add zeoxide
 eval "$(zoxide init zsh)"
