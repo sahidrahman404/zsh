@@ -101,3 +101,10 @@ export MCFLY_FUZZY=5
 export MCFLY_KEY_SCHEME=vim
 
 . /opt/asdf-vm/asdf.sh
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+
+# Turso
+export PATH="/home/rahman/.turso:$PATH"
