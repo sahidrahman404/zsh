@@ -108,3 +108,17 @@ export MCFLY_KEY_SCHEME=vim
 
 # Turso
 export PATH="/home/rahman/.turso:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/rahman/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+# bun completions
+[ -s "/home/rahman/.bun/_bun" ] && source "/home/rahman/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
